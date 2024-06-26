@@ -1,0 +1,181 @@
+<% layout('layout/boilerplate') -%>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
+<body>
+    <%- include('partials/navbar') %>
+    <main>
+        
+            <section id="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide" style="background-image: url('../Malta1.webp');"></div>
+                    <div class="carousel-slide" style="background-image: url('../malta-mdina-gate-silent-city.jpg');"></div>
+
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </section>
+            <div class="container">
+            <div class="title hidden">
+                <h1 id="title">Expats Guide Malta</h1>
+                <p>Welcome to Expat Guide Malta, your comprehensive resource for essential information tailored to expatriates living and working in Malta. Whether you're navigating the complexities of obtaining a work permit, applying for a skillcard, understanding tax obligations, securing a family visa, or managing social security, our website provides clear, detailed guidance to help you seamlessly integrate into Maltese life. Designed with expats in mind, Expat Guide Malta is your go-to 
+                    destination for all the information and updates you need to make your stay in Malta as smooth and enjoyable as possible.
+
+                </p>
+            </div>
+             <div class="pages">
+                <section id="cards">
+                    <div class="container hidden">
+                        <h2>Most Common Pages</h2>
+                        <div class="card-container">
+                            
+                            <div class="card">
+                                <h3>Work Permit</h3>
+                                <p>Information on how to apply for a work permit in Malta.</p>
+                                <a href="/workPermit">Learn More..</a>
+                            </div>
+                            <div class="card">
+                                <h3>Skillcard</h3>
+                                <p>What is a Skillcard and how you can get one.</p>
+                                <a href="/skillcard">Learn More..</a>
+                            </div>
+                            <div class="card">
+                                <h3>Driving license</h3>
+                                <p>Guidelines and rules for obtaining a driving license in Malta.</p>
+                                <a href="/drivinglicence">Learn More..</a>
+                            </div>
+                            <div class="card">
+                                <h3>social Security</h3>
+                                <p>Details about the social security system in Malta</p>
+                                <a href="/socialsecurity">Learn More..</a>
+                            </div>
+                            
+                            <div class="card">
+                                <h3>Family Reunification Visa</h3>
+                                <p>What is family reunification visa and how to get apply</p>
+                                <a href="/familyvisa">Learn More..</a>
+                            </div>
+                            <div class="card">
+                                <h3>Get Qualified</h3>
+                                <p>What is Get Qualified scheme and what are the steps</p>
+                                <a href="/getqualified">Learn More..</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </div>
+                <section id="attractions">
+                    <div class="container hidden">
+                        <h2>Main Attractions</h2>
+                        <div class="attractions-grid">
+                            <div class="attraction">
+                                <a href="https://www.visitmalta.com/en/valletta" target="_blank">
+                                    <img src="../valletta.jpg" alt="Valletta">
+                                    <div class="overlay">
+                                        <h3>Valletta</h3>
+                                        <!-- <p>The capital of Malta, known for its historic architecture and vibrant cultural scene.</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="attraction">
+                                <a href="https://www.visitmalta.com/en/mdina" target="_blank">
+                                    <img src="../malta-mdina-gate-silent-city.jpg" alt="Mdina">
+                                    <div class="overlay">
+                                        <h3>Mdina</h3>
+                                        <!-- <p>The old capital of Malta, a fortified city with stunning medieval and baroque architecture.</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="attraction">
+                                <a href="https://www.visitmalta.com/en/blue-lagoon" target="_blank">
+                                    <img src="../download.jpg" alt="Blue Lagoon">
+                                    <div class="overlay">
+                                        <h3>Blue Lagoon</h3>
+                                        <!-- <p>Famous for its crystal-clear waters and beautiful scenery.</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="attraction">
+                                <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                                    <img src="../photo-1569311607906-1d8f9e2614b5.avif" alt="Gozo">
+                                    <div class="overlay">
+                                        <h3>Gozo</h3>
+                                        <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="attraction">
+                                <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                                    <img src="../photo-1569311607906-1d8f9e2614b5.avif" alt="Comino">
+                                    <div class="overlay">
+                                        <h3>Comino</h3>
+                                        <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="attraction">
+                                <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                                    <img src="../photo-1569311607906-1d8f9e2614b5.avif" alt="Gozo">
+                                    <div class="overlay">
+                                        <h3>Gozo</h3>
+                                        <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="news">
+                    <div class="container hidden">
+                        <h2>News Updates</h2>
+                        <div class="news-feed">
+                            <div class="news-index-item">
+                                <img class="news-index-image" src="../news.jpg"> 
+                                <p>New Work Permit Regulations Announced</p></div>
+                                <div class="news-index-item">
+                                    <img class="news-index-image" src="../news.jpg"> 
+                                    <p>New Work Permit Regulations Announced</p></div>
+                                    <div class="news-index-item">
+                                        <img class="news-index-image" src="../news.jpg"> 
+                                        <p>New Work Permit Regulations Announced</p></div>
+                                        <div class="news-index-item">
+                                            <img class="news-index-image" src="../news.jpg"> 
+                                            <p>New Work Permit Regulations Announced</p></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="faq">
+                    <div class="container hidden">
+                        <h2>Frequently Asked Questions</h2>
+                        <div class="faq-item">
+                            <h3>How do I apply for a work permit?</h3>
+                            <p>Third-country nationals who receive a job offer from a company registered and operating in Malta are eligible to apply for a Single Permit that enables them to be employed in the job specified on the application.The Single Permit applications may only be submitted by the employer'
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <h3>How do Social Security benefits work and how can I qualify?</h3>
+                            <p>The contributory scheme of social security in Malta is a system where an employee or self-employed person pays a weekly contribution as laid down by the Social Security Act (Cap. 318.). The social security contributions paid during the period in which a person is gainfully active is used to finance contingencies that may arise such as sickness, unemployment or retirement as required.'
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <h3>How to apply for a driving license in Malta?</h3>
+                            <p>Identify an Instructor > Apply for a Learner’s Permit through Transport Malta website > Apply for the Theory Test > Start Learning > Apply for the Practical Test through driving school'
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <h3>Whats Get Qualified Scheme?</h3>
+                            <p>GET QUALIFIED is an initiative that supports the personal development of individuals for the achievement of qualifications and certifications required by industry. The incentive is applicable to individuals following a course of studies leading to a certification, diploma, degree or post-graduate degree courses. Upon successful completion the student will benefit from a tax credit enabling them to recover part of the costs incurred.'
+                            </p>
+                        </div>
+                    </div>
+                </section>
+             </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Expats Guide Malta. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../javascript/index.js"></script>
+
+    

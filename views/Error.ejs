@@ -1,0 +1,16 @@
+<% layout('layout/boilerplate') -%>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/error.css">') %>
+    <%- include('partials/navbar') %>
+    <main>
+        <div class="error">
+            <div class="errorHeader">
+                <h2><%= err.status%>,<%=err.message  %></h2>
+
+            </div>
+            <div class="errorDetails">
+                <p><%= err.stack -%></p>
+
+            </div>
+        </div>
+    </main>

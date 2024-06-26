@@ -1,0 +1,664 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2C5F2D;
+    color: white;
+    padding: 1em 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    margin: 0;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+nav ul.nav-links {
+    transition: 1s;
+}
+.active{
+    font-weight: 600;
+    
+}
+
+
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+/* <............Index.................> */
+
+#title{
+    margin: 40px 0px;
+    text-align: center;
+}
+.container h2{
+    color: #2C5F2D;
+}
+h1{
+    font-size: 2em;
+    color: #2C5F2D;
+}
+.title p{
+    line-height: 33px;
+    font-weight: 500;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+
+
+
+.news-feed {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    gap: 1em;
+}
+
+.news-index-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1em;
+    display: inline-block;
+    white-space: normal;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-item p {
+    display: none;
+    margin: 0.5em 0 0;
+}
+/* <.......scroll down effect.........> */
+.hidden{
+    opacity: 0;
+    transform: translateY(30%);
+    transition: opacity 0.6s ease-out, transform 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
+/* ..........< nEWS  >............ */
+section#news .container {
+    width: 80%;
+    
+}
+
+
+.news-item {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    padding: 1em 1em;
+    align-items: center;
+    margin-top: 30px;
+  
+}
+.news-index-image{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    height: auto;
+    padding-right: 20px;
+}
+#news{
+    margin: 30px 0;
+}
+#news h1{
+    text-align: center;
+}
+
+.news-content {
+    flex: 1;
+    padding-right: 1em;
+    margin: 20px 0;
+    
+}
+
+.news-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    height: auto;
+    padding-right: 20px;
+    
+}
+
+.news-content h2 {
+    color: #2C5F2D;
+}
+.news-content span {
+    font-size: 14px;
+    color: #2C5F2D;
+}
+
+.news-content p {
+    margin: 0.5em 0;
+}
+
+.news-content a {
+    color: #97BC62;
+    text-decoration: none;
+}
+
+.news-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* <..........attraction.......> */
+.attractions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow-x:scroll;  //for overflow to the side effect
+    white-space: nowrap; */
+    gap: 1em;
+}
+
+.attraction {
+    position: relative;
+    width: calc(33% - 1em);
+}
+
+.attraction img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    /* background: rgba(0, 0, 0, 0.4); */
+    color: #fff;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 0 0 8px 8px;
+    transition: background 0.3s ease;
+}
+
+.attraction h3 {
+    margin: 0;
+    color: #f9f9f9;
+    font-size: 1.5em;
+}
+
+
+.attraction a {
+    color: #97BC62;
+    text-decoration: none;
+}
+
+.attraction img:hover {
+    transition: 1s;
+    transform: translateY(-8px);
+  
+   
+}
+
+
+/* <.............work permit..........> */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.card {
+    background-color:#97BC62;
+    border-radius: 8px;
+    padding: 1em;
+    width: calc(28% - 1em);
+  
+
+    margin-top:40px;
+}
+.card:hover{
+    
+    transition: 1s;
+    transform: translateY(-5px);
+   
+
+}
+
+.card h3 {
+    color: black;
+    margin-top: 0;
+}
+
+.card p {
+    margin: 0.5em 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* <...............FAQ....................> */
+#faq{
+    margin: 50px 0;
+}
+#faq div h2{
+    color: #2C5F2D;
+
+}
+.faq-item {
+    margin-bottom: 1em;
+    margin-left: 2em;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+    margin: 10px;
+    color: #2C5F2D;
+}
+.faq-item h3:hover{
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.faq-item p {
+    display: none;
+    margin: 0.5em 0 0 2em;
+}
+/* <...........Skillcard............> */
+.skillcard-container {
+    display: flex;
+} 
+
+.left-column {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    padding-right: 1em;
+}
+
+.left-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-column li {
+    margin-bottom: 1em;
+}
+
+.left-column a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.left-column a:hover {
+    text-decoration: underline;
+}
+
+.right-column {
+    width: 75%;
+    padding-left: 1em;
+}
+
+
+.content-section {
+    display: none;
+}
+.right-column div h2{
+    color: #2C5F2D;
+    padding-left: 25px;
+    
+}
+.content-section div p{
+    padding-left: 20px;
+ font-size: 1em;
+ line-height: 1.5em;
+}
+
+.content-section.active {
+    display: block;
+}
+.row.fees{
+    display: flex;
+    
+
+}
+.row.fees div{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+ .content-section a{
+    display: block;
+    margin:20px;
+    padding: 10px 20px;
+    background-color:#97BC62;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.content-section a:hover{
+    background-color: #2C5F2D;
+}
+.row.fees div h4{
+    background-color: #97BC62;
+    padding: 20px;
+}
+.phase2{
+    font-weight: 500;
+}
+.ul{
+    margin-left: 40px;
+}
+
+
+/* <....Tourist info.........> */
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+.right-column p{
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.right-column li{
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    
+    
+}
+.content-section{
+    margin-top:30px;
+}
+.left-column{
+    margin-top: 50px;
+}
+.left-column a{
+    font-size: 1.3em;
+    color: #2C5F2D;
+}
+i{
+    margin-top: 30px;
+    padding-right: 8px;
+}
+/* <................Driving Licence...........> */
+
+.licence{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+.driving-col-2{
+    display: flex;
+    border:solid 2px #2C5F2D;
+    padding: 20px 40px;
+    font-weight: 500;
+    border-radius: 15px;
+}
+.driving-col-1{
+    background: #fff;
+    border:solid 2px #2C5F2D;
+    /* background: linear-gradient(90deg, rgba(151,188,98,1) 0%, rgba(221,221,221,1) 100%); */
+    /* background: linear-gradient(90deg, rgba(151,188,98,1) 0%, rgba(44,95,45,1) 100%); */
+   padding: 20px 40px;
+   font-weight: 500;
+   border-radius: 15px;
+}
+.licence div h3{
+    background-color:#97BC62;
+    padding: 5px 10px;
+}
+.licence div p{
+    font-weight: 600;
+    
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.licence div p:hover{
+text-decoration-line: underline;
+}
+.licence-header{
+    text-align: center;
+    color:#2C5F2D;
+    font-size: 2em;
+    padding-bottom: 10px;
+  
+}
+
+.driving-categories li a{
+    color: #2C5F2D;
+    text-decoration: none;
+    font-weight: 600;
+}
+.driving-categories li a:hover{
+    text-decoration: underline;
+}
+
+/* <>................Get qualified.............> */
+.get-qualified{
+    width: 70%;
+    line-height: 25px;
+}
+.get-qualified h3{
+    color: #2C5F2D;
+}
+.get-qualified h2{
+    color: #2C5F2D;
+}
+/* <........Family visa.......> */
+.container.visa{
+    width:70%;
+}
+.container.visa h3{
+    color: #2C5F2D;
+}
+.container.visa h1{
+    color: #2C5F2D;
+}
+
+ 
+
+footer .footer {
+    background-color:  #97BC62;
+    color: white;
+    text-align: center;
+    padding: .5em 0;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #title{
+        margin: 40px 0px;
+        text-align: left;
+      
+    }
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0.5em 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transform: translateY(-100%);
+    }
+
+    nav ul.nav-links.active {
+        height: auto;
+        transform: translateY(0);
+    }
+    .logo{
+        color: #fff;
+        
+    }
+
+    nav .hamburger {
+        display: block;
+       
+    }
+
+    .container {
+        width: 95%;
+    }
+    .card {
+        width: calc(80% - 1em);
+    }
+
+    .skillcard-container {
+        flex-direction: column;
+        
+
+    }
+    .content-section h2{
+        color: #2C5F2D;
+    }
+    .content-section h3{
+        color: #2C5F2D;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left-column {
+        border-right: none;
+        padding-bottom: 1em;
+    }
+    
+
+    .attractions-grid {
+        flex-direction: column;
+    }
+
+    .attraction {
+        width: 100%;
+    }
+    .news-item {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .news-content {
+        padding-right: 0;
+        padding-bottom: 1em;
+    }
+
+    .news-image img {
+        max-width: 100%;
+    }
+    .licence{
+       flex-direction: column;
+    
+    }
+}

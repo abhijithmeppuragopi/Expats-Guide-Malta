@@ -1,0 +1,19 @@
+
+<% layout('layout/boilerplate') -%>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
+
+    <%- include('partials/navbar') %>
+<section id="work-permit">
+    <div class="container">
+        <h2>Work Permit</h2>
+        <div class="card-container" id="work-permit-cards">
+            <!-- Work permit cards will be dynamically loaded here -->
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer">
+        <p>&copy; 2024 Expats in Malta. All rights reserved.</p>
+    </div>
+</footer>
+<script src="/app.js"></script>

@@ -1,0 +1,19 @@
+
+<% layout('layout/boilerplate') -%>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
+
+    <%- include('partials/navbar') %>
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div id="faq-content">
+                <!-- FAQ items will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="footer">
+        <p>&copy; 2024 Expats in Malta. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../javascript/faq.js"></script>

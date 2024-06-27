@@ -248,6 +248,7 @@ section#news .container {
 .attraction img {
     width: 100%;
     height: auto;
+    max-height:230px;
     border-radius: 8px;
 }
 

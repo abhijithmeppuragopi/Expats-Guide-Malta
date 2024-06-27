@@ -23,13 +23,13 @@ app.get('/skillcard',(req,res)=>{
     res.render("skillcard.ejs");
 })
 app.get('/workpermit',(req,res)=>{
-    res.render("workpermit.ejs");
+    res.render("workPermit.ejs");
 })
 app.get('/drivinglicence',(req,res)=>{
     res.render("driving-license.ejs");
 })
 app.get('/getqualified',(req,res)=>{
-    res.render("getqualified.ejs");
+    res.render("get-qualified.ejs");
 })
 app.get('/news',(req,res)=>{
     res.render("news.ejs");

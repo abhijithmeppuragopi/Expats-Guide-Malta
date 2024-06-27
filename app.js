@@ -10,7 +10,7 @@ app.set('view engine','ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/images'));
 
-app.get('/home',(req,res,next)=>{
+app.get('/',(req,res,next)=>{
     try{
     res.render("index.ejs");
 }

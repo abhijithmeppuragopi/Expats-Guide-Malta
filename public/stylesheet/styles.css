@@ -282,6 +282,11 @@ section#news .container {
   
    
 }
+/* <....Tourist info....> */
+.websites li a{
+    text-decoration: none;
+    color: #2C5F2D;
+}
 
 
 /* <.............work permit..........> */
@@ -412,12 +417,17 @@ section#news .container {
 .row.fees{
     display: flex;
     
-
 }
 .row.fees div{
     margin-left: 20px;
     margin-bottom: 50px;
 }
+/* .col2 p{
+    position: absolute;
+}
+.col3 p{
+    position: inherit;
+} */
  .content-section a{
     display: block;
     margin:20px;
@@ -558,13 +568,14 @@ text-decoration-line: underline;
  
 
 footer .footer {
-    background-color:  #97BC62;
+    background-color:#2C5F2D;
     color: white;
     text-align: center;
     padding: .5em 0;
     /* position: absolute; */
     bottom: 0;
     width: 100%;
+    font-size: 1em;
 }
 
 @media (max-width: 768px) {
@@ -648,6 +659,7 @@ footer .footer {
     .news-item {
         flex-direction: column;
         width: 100%;
+        padding:10px 0;
     }
 
     .news-content {
@@ -661,5 +673,11 @@ footer .footer {
     .licence{
        flex-direction: column;
     
+    }
+    .col3 p{
+        margin-bottom: 3rem;
+    }
+    .news-index-image{
+        min-width: 150px;
     }
 }

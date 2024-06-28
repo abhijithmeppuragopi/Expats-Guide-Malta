@@ -1,68 +1,81 @@
 
 <% layout('layout/boilerplate') -%>
-<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/tourist-info.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
 </head>
 <body>
     <%- include('partials/navbar') %>
     <main>
         <section id="weather">
-            <div class="container">
+            <div class="container hidden">
                 <h2>Weather</h2>
                 <p>Malta enjoys a Mediterranean climate with hot, dry summers and mild, wet winters.
                      Average temperatures in summer range from 25°C to 35°C, while winter temperatures 
                      range from 10°C to 20°C.</p>
             </div>
         </section>
-        <div class="attraction">
-            <a href="https://www.visitmalta.com/en/mdina" target="_blank">
-                <img src="../mdina-1.jpg" alt="Mdina">
-                <div class="overlay">
-                    <h3>Mdina</h3>
-                    <!-- <p>The old capital of Malta, a fortified city with stunning medieval and baroque architecture.</p> -->
+        <section id="attractions">
+            <div class="container hidden">
+                <h2>Main Attractions</h2>
+                <div class="attractions-grid">
+                    <div class="attraction">
+                        <a href="https://www.visitmalta.com/en/valletta" target="_blank">
+                            <img src="../valletta.jpg" alt="Valletta">
+                            <div class="overlay">
+                                <h3>Valletta</h3>
+                                <!-- <p>The capital of Malta, known for its historic architecture and vibrant cultural scene.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="attraction">
+                        <a href="https://www.visitmalta.com/en/mdina" target="_blank">
+                            <img src="../mdina-1.jpg" alt="Mdina">
+                            <div class="overlay">
+                                <h3>Mdina</h3>
+                                <!-- <p>The old capital of Malta, a fortified city with stunning medieval and baroque architecture.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="attraction">
+                        <a href="https://www.visitmalta.com/en/blue-lagoon" target="_blank">
+                            <img src="../blue-lagoon-malta-beaches.jpg" alt="Blue Lagoon">
+                            <div class="overlay">
+                                <h3>Blue Lagoon</h3>
+                                <!-- <p>Famous for its crystal-clear waters and beautiful scenery.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="attraction">
+                        <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                            <img src="../gozo1.jpg" alt="Gozo">
+                            <div class="overlay">
+                                <h3>Gozo</h3>
+                                <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="attraction">
+                        <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                            <img src="../comino.jpg" alt="Comino">
+                            <div class="overlay">
+                                <h3>Comino</h3>
+                                <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="attraction">
+                        <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                            <img src="../blue-grotto-in-malta.jpg" alt="Blue Grotto">
+                            <div class="overlay">
+                                <h3>Blue Grotto</h3>
+                                <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </a>
-        </div>
-        <div class="attraction">
-            <a href="https://www.visitmalta.com/en/blue-lagoon" target="_blank">
-                <img src="../download.jpg" alt="Blue Lagoon">
-                <div class="overlay">
-                    <h3>Blue Lagoon</h3>
-                    <!-- <p>Famous for its crystal-clear waters and beautiful scenery.</p> -->
-                </div>
-            </a>
-        </div>
-        <div class="attraction">
-            <a href="https://www.visitmalta.com/en/gozo" target="_blank">
-                <img src="../photo-1569311607906-1d8f9e2614b5.avif" alt="Gozo">
-                <div class="overlay">
-                    <h3>Gozo</h3>
-                    <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
-                </div>
-            </a>
-        </div>
-        <div class="attraction">
-            <a href="https://www.visitmalta.com/en/gozo" target="_blank">
-                <img src="../images/comino.jpg" alt="Comino">
-                <div class="overlay">
-                    <h3>Comino</h3>
-                    <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
-                </div>
-            </a>
-        </div>
-        <div class="attraction">
-            <a href="https://www.visitmalta.com/en/gozo" target="_blank">
-                <img src="../images/blue-grotto-in-malta.jpg" alt="Blue Grotto">
-                <div class="overlay">
-                    <h3>Blue Grotto</h3>
-                    <!-- <p>Known for its rural landscapes, historic sites, and beautiful beaches.</p> -->
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-</section>
+            </div>
+        </section>
         <section id="activities">
-            <div class="container">
+            <div class="container hidden">
                 <h2>Activities</h2>
                 <ul>
                     <li>Scuba diving and snorkeling</li>
@@ -74,15 +87,15 @@
             </div>
         </section>
         <section id="transportation">
-            <div class="container">
+            <div class="container hidden">
                 <h2>Transportation</h2>
                 <p>Malta has a well-developed transportation network that includes buses, taxis, and ferries. Renting a car is also a popular option for tourists who want to explore the island at their own pace.</p>
             </div>
         </section>
-        <section id="websites">
-            <div class="container">
+        <section >
+            <div class="container hidden">
                 <h2>Useful Websites</h2>
-                <ul>
+                <ul class="websites"> 
                     <li><a href="https://www.visitmalta.com" target="_blank">Visit Malta</a> - Official tourism website</li>
                     <li><a href="https://www.publictransport.com.mt" target="_blank">Malta Public Transport</a> - Information on buses and schedules</li>
                     <li><a href="https://www.maltairport.com" target="_blank">Malta International Airport</a> - Flight information and airport services</li>
@@ -91,7 +104,7 @@
             </div>
         </section>
         <section id="tours">
-            <div class="container">
+            <div class="container hidden">
                 <h2>Tours</h2>
                 <p>There are various tours available to explore Malta's rich history and natural beauty. Popular tours include:</p>
                 <ul>
@@ -104,8 +117,8 @@
         </section>
     </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Tourist Information - Malta. All rights reserved.</p>
+        <div class="footer">
+            <p>&copy; 2024 Expats Guide Malta. All rights reserved.</p>
         </div>
     </footer>
     <script src="../javascript/index.js"></script>

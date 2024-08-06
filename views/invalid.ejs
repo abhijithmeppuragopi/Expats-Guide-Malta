@@ -1,0 +1,22 @@
+<% layout('layout/boilerplate') -%>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/invalid.css">') %>
+    <%- include('partials/navbar') %>
+
+    <main>
+        <div class="invalid">
+            
+            <i class="fa-regular fa-face-frown"></i>
+            <h1>404- Page Not Found</h1>
+            <h2>Invalid URL</h2>
+            <p>Check the URL and try again</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Expats in Malta. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../javascript/news.js"></script>

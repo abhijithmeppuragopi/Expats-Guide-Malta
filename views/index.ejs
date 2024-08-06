@@ -1,13 +1,19 @@
 <% layout('layout/boilerplate') -%>
 <% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/navbar.css">') %>
 <body>
     <%- include('partials/navbar') %>
+    <% if(success && success.length>0) {%>
+    <p class="success"><%-success  %></p>
+    <% } %>
     <main>
-        
+       
             <section id="carousel">
                 <div class="carousel-container">
-                    <div class="carousel-slide" style="background-image: url('../Malta1.webp');"></div>
                     <div class="carousel-slide" style="background-image: url('../valletta.jpg');"></div>
+                    <div class="carousel-slide" style="background-image: url('../Malta1.webp');"></div>
+                    
+
 
                 </div>
                 <button class="carousel-button prev">❮</button>
@@ -15,8 +21,8 @@
             </section>
             <div class="container">
             <div class="title hidden">
-                <h1 id="title">Expats Guide Malta</h1>
-                <p>Welcome to Expat Guide Malta, your comprehensive resource for essential information tailored to expatriates living and working in Malta. Whether you're navigating the complexities of obtaining a work permit, applying for a skillcard, understanding tax obligations, securing a family visa, or managing social security, our website provides clear, detailed guidance to help you seamlessly integrate into Maltese life. Designed with expats in mind, Expat Guide Malta is your go-to 
+                <h1 id="title">Welcome to Expats Guide Malta</h1>
+                <p>Your comprehensive resource for essential information tailored to expatriates living and working in Malta. Whether you're navigating the complexities of obtaining a work permit, applying for a skillcard, understanding tax obligations, securing a family visa, or managing social security, our website provides clear, detailed guidance to help you seamlessly integrate into Maltese life. Designed with expats in mind, Expat Guide Malta is your go-to 
                     destination for all the information and updates you need to make your stay in Malta as smooth and enjoyable as possible.
 
                 </p>
@@ -67,7 +73,7 @@
                         <h2>Main Attractions</h2>
                         <div class="attractions-grid">
                             <div class="attraction">
-                                <a href="https://www.visitmalta.com/en/valletta" target="_blank">
+                                <!-- <a href="https://www.visitmalta.com/en/valletta" target="_blank"> -->
                                     <img src="../valletta.jpg" alt="Valletta">
                                     <div class="overlay">
                                         <h3>Valletta</h3>
@@ -76,7 +82,7 @@
                                 </a>
                             </div>
                             <div class="attraction">
-                                <a href="https://www.visitmalta.com/en/mdina" target="_blank">
+                                <!-- <a href="https://www.visitmalta.com/en/mdina" target="_blank"> -->
                                     <img src="../mdina-1.jpg" alt="Mdina">
                                     <div class="overlay">
                                         <h3>Mdina</h3>
@@ -85,7 +91,7 @@
                                 </a>
                             </div>
                             <div class="attraction">
-                                <a href="https://www.visitmalta.com/en/blue-lagoon" target="_blank">
+                                <!-- <a href="https://www.visitmalta.com/en/blue-lagoon" target="_blank"> -->
                                     <img src="../blue-lagoon-malta-beaches.jpg" alt="Blue Lagoon">
                                     <div class="overlay">
                                         <h3>Blue Lagoon</h3>
@@ -94,7 +100,7 @@
                                 </a>
                             </div>
                             <div class="attraction">
-                                <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                                <!-- <a href="https://www.visitmalta.com/en/gozo" target="_blank"> -->
                                     <img src="../gozo1.jpg" alt="Gozo">
                                     <div class="overlay">
                                         <h3>Gozo</h3>
@@ -103,7 +109,7 @@
                                 </a>
                             </div>
                             <div class="attraction">
-                                <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                                <!-- <a href="https://www.visitmalta.com/en/gozo" target="_blank"> -->
                                     <img src="../comino.jpg" alt="Comino">
                                     <div class="overlay">
                                         <h3>Comino</h3>
@@ -112,7 +118,7 @@
                                 </a>
                             </div>
                             <div class="attraction">
-                                <a href="https://www.visitmalta.com/en/gozo" target="_blank">
+                                <!-- <a href="https://www.visitmalta.com/en/gozo" target="_blank"> -->
                                     <img src="../blue-grotto-in-malta.jpg" alt="Blue Grotto">
                                     <div class="overlay">
                                         <h3>Blue Grotto</h3>
@@ -182,5 +188,6 @@
         </div>
     </footer>
     <script src="../javascript/index.js"></script>
+
 
     

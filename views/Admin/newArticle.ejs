@@ -1,0 +1,15 @@
+<% layout('layout/boilerplate') -%>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/navbar.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/newArticle.css">') %>
+    <%- include('../partials/navbar.ejs') %>
+
+<h2>Add New Article</h2>
+<form action="/news/newarticle" method="POST">
+    <input type="text" name="title" placeholder="Title" required>
+    <input type="text" name="author" placeholder="Author" required>
+    <!-- <input type="text" name="category" placeholder="Category" required> -->
+    <textarea name="content" placeholder="Content" rows="8" required></textarea>
+    <input type="text" name="imageUrl" placeholder="Image URL">
+    <input type="text" name="tags" placeholder="Tags (comma-separated)">
+    <button type="submit">Add Article</button>
+</form>

@@ -1,0 +1,30 @@
+/* <.......Invalid...........> */
+.invalid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+height: 80vh;
+}
+.fa-regular{
+ color: red;
+ font-size: 50px;
+ margin: 0 0;
+ padding: 0;
+ 
+}
+
+.invalid h1{
+    font-size: 3em;
+    color: red;
+    margin-bottom: 0px;
+}
+.invalid h2{
+    font-size: 2em;
+    color: red;
+    margin-bottom: 0px;
+}
+.invalid p{
+    font-size: 20px;
+    color: red;
+} 

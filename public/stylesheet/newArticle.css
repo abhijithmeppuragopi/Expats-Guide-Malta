@@ -1,0 +1,29 @@
+form{
+    width:70%;
+    margin: auto;
+}
+
+
+h2 {
+    color: #2C5F2D;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+button {
+    background-color: #2C5F2D;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

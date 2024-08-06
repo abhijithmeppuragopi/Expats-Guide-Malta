@@ -1,11 +1,51 @@
 
 <% layout('layout/boilerplate') -%>
-<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/navbar.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/news.css">') %>
 
     <%- include('partials/navbar') %>
     <section id="news">
-        <h1>Latest News</h1>
-        <div class="container news">
+        <div class="container">
+            <p><%-success  %></p>
+            <div class="news-subtitle">
+                <p class="tab-links active-links" onclick="opentab('Latest')">Latest News</p>
+                <p class="tab-links" onclick="opentab('Popular')">Most Popular</p>
+            </div>
+        
+            <div class="tab-content active-tabs" id="Latest">
+            <% for( let art of Articles) { %>
+                
+            <article class="news-item">
+                <div class="news-image">
+                <img src="<%-art.imageUrl  %>" alt="Work Permit Policies">
+            </div>
+            <div class="news-content">
+                <h2><%-art.title  %></h2>
+                <span class="news-date"><%-art.date  %></span>
+                <p><%-art.content  %>
+                    <p class="tags"><%-art.tags  %>    
+                    <!-- </p>
+                    <p>The government agency said the rise was due to administrative and processing costs.
+                    </p>
+                    <p>“The cards that non-EU nationals carry are sophisticated and have a high cost as well,” a spokesperson added.
+                     -->
+                    <!-- Previously, an application for a single work permit cost applicants €280.50</p> -->
+                    <a href="https://timesofmalta.com/article/identita-increases-work-permit-fees-noneu-workers.1077309">Read more</a>
+                    <div>
+                        <div class="edit-delete">
+                    <a class="edit" href="news/<%-art._id%>/edit ">Edit</a>
+                    <form action="news/<%-art._id%>/delete?_method=delete" method="post"> 
+                        <button class="delete">Delete</button>
+                     </form>
+                    </div>
+                </div>
+                </div>
+           
+        </article>
+        <% } %>
+    </div>
+        <div class="tab-content" id="Popular">
+            <h1>Popular News</h1>
             <article class="news-item">
                 
                 <div class="news-image">
@@ -30,7 +70,7 @@
       
             
             <article class="news-item">
-                
+               
                     <div class="news-image">
                     <img src="../skillcard.jpeg" alt="Work Permit Policies">
                 </div>
@@ -77,6 +117,8 @@
                 <img src="../0ce6430717fa9fcba5e5501fb6f74ed0b541b1bb-1673893347-67fe13ef-960x640.jpeg" alt="Work Permit Policies">
             </div>
             <div class="news-content">
+                
+                
     
                 <h2>Non-EU workers increase tenfold in a decade to top 50,000</h2>
                 <span>23/06/2024</span>
@@ -92,6 +134,7 @@
             </div>
             
         </article>
+    </div>
         </div>
     </section>
 <footer>

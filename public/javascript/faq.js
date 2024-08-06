@@ -1,4 +1,51 @@
 // Example of dynamically loading FAQ content
+
+// const form = document.getElementsByClassName('comment-form');
+Array.from(document.getElementsByClassName('fa-comment')).forEach(c=>{
+console.log(c)
+c.addEventListener('click', event => {
+                 event.preventDefault();
+               
+               const targetId=c.getAttribute('data-content');
+               console.log(targetId);
+               const form=document.getElementById(targetId);
+               console.log(form);
+                 form.style.display = form.style.display === 'block' ? 'none' : 'block';    
+
+        })
+        // Array.from(document.getElementsByClassName('comment-form')).forEach(f=>{
+        //     console.log(f.getAttribute('data-content'))
+       
+    }) 
+// })   
+//     comment.addEventListener('click', event => {
+//             event.preventDefault();
+//             console.log('working',comment);
+//     }
+//         )
+//         })
+
+    // .forEach(comment => {
+    //     comment.addEventListener('click', event => {
+    //         event.preventDefault();
+    //         console.log('working');
+
+    //         // Remove active class from all content sections
+    //         form.forEach(f => {
+    //             f.style.display = 'none';
+    //         });
+
+    //         // Get the target content section and display it
+    //         const targetId = comment.getAttribute('data-content');
+    //         console.log(targetId);
+    //         document.getElementById(targetId).style.display = form.style.display === 'block' ? 'none' : 'block';
+    //     });
+    // });
+
+
+
+
+
 const faqContent = document.getElementById('faq-content');
 
 const faqs = [

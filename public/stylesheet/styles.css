@@ -1,65 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #2C5F2D;
-    color: white;
-    padding: 1em 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo{
-    margin: 0;
-    color: #fff;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin: 0 1em;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-nav .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-nav .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-nav ul.nav-links {
-    transition: 1s;
-}
-.active{
-    font-weight: 600;
-    
-}
 
 
 
@@ -106,9 +44,9 @@ h1{
 
 .carousel-button {
     position: absolute;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     border: none;
     padding: 1em;
@@ -124,7 +62,7 @@ h1{
 }
 
 
-
+/* <...Index news Feed.....> */
 
 .news-feed {
     display: flex;
@@ -140,6 +78,14 @@ h1{
     display: inline-block;
     white-space: normal;
 }
+.news-index-image{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    height: auto;
+    padding-right: 20px;
+}
+/* <....Index Faq.......> */
 
 .faq-item h3 {
     cursor: pointer;
@@ -179,13 +125,7 @@ section#news .container {
     margin-top: 30px;
   
 }
-.news-index-image{
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    height: auto;
-    padding-right: 20px;
-}
+
 #news{
     margin: 30px 0;
 }
@@ -231,7 +171,7 @@ section#news .container {
 }
 
 
-/* <..........attraction.......> */
+/* <..........attractions In Index ans Tourist Info.......> */
 .attractions-grid {
     display: flex;
     flex-wrap: wrap;
@@ -282,14 +222,10 @@ section#news .container {
   
    
 }
-/* <....Tourist info....> */
-.websites li a{
-    text-decoration: none;
-    color: #2C5F2D;
-}
 
 
-/* <.............work permit..........> */
+
+/* <.............Index Card..........> */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -362,7 +298,7 @@ section#news .container {
     display: none;
     margin: 0.5em 0 0 2em;
 }
-/* <...........Skillcard............> */
+/* <...........Skillcard & Workpermit............> */
 .skillcard-container {
     display: flex;
 } 
@@ -422,12 +358,7 @@ section#news .container {
     margin-left: 20px;
     margin-bottom: 50px;
 }
-/* .col2 p{
-    position: absolute;
-}
-.col3 p{
-    position: inherit;
-} */
+
  .content-section a{
     display: block;
     margin:20px;
@@ -488,6 +419,11 @@ ul li {
 i{
     margin-top: 30px;
     padding-right: 8px;
+}
+
+.websites li a{
+    text-decoration: none;
+    color: #2C5F2D;
 }
 /* <................Driving Licence...........> */
 
@@ -565,8 +501,9 @@ text-decoration-line: underline;
     color: #2C5F2D;
 }
 
- 
 
+ 
+/* <.........Footer...........> */
 footer .footer {
     background-color:#2C5F2D;
     color: white;
@@ -589,9 +526,6 @@ footer .footer {
         text-align: center;
     }
 
-    nav ul {
-        flex-direction: column;
-    }
 
     nav li {
         margin: 0.5em 0;
@@ -611,12 +545,30 @@ footer .footer {
     }
     .logo{
         color: #fff;
+        font-size: 1.5em;
         
+    }
+    /* .carousel-container{
+        display: none;
+    } */
+    .carousel-slide{
+        max-height: 200px;
+    }
+    .carousel-container{
+        height: 200px;
     }
 
     nav .hamburger {
         display: inline-block;
        
+    }
+    #title{
+        font-size: 1.7em;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .title p{
+     text-align: center;
     }
 
     .container {
@@ -679,5 +631,11 @@ footer .footer {
     }
     .news-index-image{
         min-width: 150px;
+    }
+    .get-qualified{
+        width: 90%;
+    }
+    .container.visa{
+        width: 90%;
     }
 }

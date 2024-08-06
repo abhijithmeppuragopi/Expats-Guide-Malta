@@ -1,0 +1,167 @@
+.container{
+    width:90%
+}
+.row{
+    display: flex;
+    gap: 40px;
+
+ }
+ .questions{
+   width: 100%;
+ }
+.ask{
+    background:#97BC62;
+    padding: 30px 10px;
+    color:#2C5F2D;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+ 
+ 
+ .ask form input{
+    width: 70%;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+ }
+ .ask form button{
+    padding: 7px 15px;
+    outline: none;
+    background: #fff;
+    border: 1px solid #2C5F2D;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 10px;
+ }
+ .question-card{
+    background:rgba(255, 255, 255, 0.938);
+    padding: 10px;
+    color: #2C5F2D;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+ }
+ .question-card h3{
+    font-weight: 700;
+    font-size:1.2em ;
+    padding-left: 10px;
+    margin-top: 0;
+ }
+ .question-user{
+   font-size: .8em;
+   color: black;
+   padding-left: 10px;
+   font-style: italic;
+   text-align: end;
+ }
+ .header{
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.3px solid rgba(0,0,0,0.2);
+    padding: 5px 0px;
+    /* background: rgba(214, 214, 214, 0.589); */
+    margin-bottom: 8px;
+ }
+ .header i{
+    font-size: .7em;
+    color: black;
+    padding-right: 4px;
+    padding-top: 5px;
+    font-weight: 600;
+
+ }
+ .header i:hover{
+    cursor: pointer;
+ }
+ .header i span{
+    
+    padding-left: 5px;
+ }
+ .question-card form{
+    padding: 8px;
+    margin-left: 30px;
+    
+    /* border: #2C5F2D solid 1px; */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+ }
+ .comment-form{
+   display: none;
+ }
+ .question-card form input{
+    width:60%;
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 1px solid black;
+ }
+ .question-card form button{
+    padding: 5px 10px;
+    border: 1px solid #97BC62;
+    background: none;
+    border-radius: 10px;
+    display: inline-block;
+ }
+
+ .fa-user{
+    display: inline-block;
+ }
+ .person{
+  font-size: .8em;
+  color: black;
+  display: inline-block;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-weight: 600;
+ }
+ .comment{
+    display: inline-block;
+    font-size: 0.8em;
+    padding-left: 15px;
+    margin-top: -10px;
+    color: black;
+
+ }
+ /* .....Frequently asked....... */
+
+ #faq-content{
+    width:100%;
+    max-width: 600px;
+ }
+ #faq{
+    margin: 50px 0;
+}
+#faq div h2{
+    color: #2C5F2D;
+
+}
+.faq-item {
+    margin-bottom: 1em;
+    margin-left: 2em;
+    width: 100%;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+    margin: 10px;
+    color: #2C5F2D;
+}
+.faq-item h3:hover{
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.faq-item p {
+    display: none;
+    margin: 0.5em 0 0 2em;
+}
+
+ @media (max-width: 768px) {
+ .row{
+    flex-direction: column;
+    gap: 20px;
+
+ }
+}

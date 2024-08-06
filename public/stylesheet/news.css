@@ -1,0 +1,138 @@
+.news-subtitle{
+    width:100%;
+    background:#97BC62;
+    padding: 10px 20px;
+}
+.news-subtitle p{
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-right: 30px;
+    color: white;
+
+}
+.news-subtitle p:hover{
+    color: rgba(255, 255, 255, 0.781);
+}
+
+.tab-content{
+    display: none;
+}
+.tab-content.active-tabs{
+    display: block;
+}
+
+/* <.......content.......> */
+section#news .container {
+    width: 80%;
+    
+}
+
+
+.news-item {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    padding: 1em 1em;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+  
+}
+
+#news{
+    margin: 30px 0;
+}
+#news h1{
+    text-align: center;
+    color: #2C5F2D;
+}
+
+.news-content {
+    flex: 1;
+    padding-right: 1em;
+    margin: 20px 0;
+    
+}
+
+.news-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    height: auto;
+    padding-right: 20px;
+    
+}
+
+.news-content h2 {
+    color: #2C5F2D;
+}
+.news-content span {
+    font-size: 14px;
+    color: #2C5F2D;
+}
+
+.news-content p {
+    margin: 0.5em 0;
+}
+
+.news-content a {
+    color: #97BC62;
+    text-decoration: none;
+}
+
+.news-content a:hover {
+    text-decoration: underline;
+}
+.edit-delete{
+    display: flex;
+
+
+
+}
+.edit{
+    display: block;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+    color:#2C5F2D;
+    margin-right: 20px;
+    border: 1px solid  #97BC62;
+}
+.delete{
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color:#2C5F2D;
+    background:none;
+    border: 1px solid  #97BC62 ;
+}
+
+@media (max-width: 768px) {
+ 
+    .news-item {
+        flex-direction: column;
+        width: 100%;
+        padding:10px 0;
+    }
+
+    .news-content {
+        padding-right: 0;
+        padding-bottom: 1em;
+    }
+
+    .news-image img {
+        max-width: 100%;
+    }
+    .licence{
+       flex-direction: column;
+    
+    }
+    .col3 p{
+        margin-bottom: 3rem;
+    }
+    .news-index-image{
+        min-width: 150px;
+    }
+
+}

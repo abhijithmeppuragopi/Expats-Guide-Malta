@@ -1,0 +1,139 @@
+/* <...........Skillcard & Workpermit............> */
+.skillcard-container {
+    display: flex;
+} 
+
+.left-column {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    padding-right: 1em;
+}
+.left-column ul li a {
+    color: #2C5F2D;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+.left-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-column li {
+    margin-bottom: 1em;
+}
+
+.left-column a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.left-column a:hover {
+    text-decoration: underline;
+}
+
+.right-column {
+    width: 75%;
+    padding-left: 1em;
+}
+
+h3{
+    color: #2C5F2D;
+    padding-left: 20px;
+}
+.content-section {
+    display: none;
+}
+.right-column div h2{
+    color: #2C5F2D;
+    padding-left: 20px;
+    
+}
+ul li{
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+h4{
+    color: #2C5F2D;
+    padding-left: 10px;
+}
+.content-section div p{
+    padding-left: 20px;
+ font-size: 1em;
+ line-height: 1.5em;
+ margin: 10px;
+}
+
+.content-section.active {
+    display: block;
+}
+.row.fees{
+    display: flex;
+    
+}
+.row.fees div{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+ .content-section a{
+    display: block;
+    margin:20px;
+    padding: 10px 20px;
+    background-color:#97BC62;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.content-section a:hover{
+    background-color: #2C5F2D;
+}
+.row.fees div h4{
+    background-color: #97BC62;
+    padding: 20px;
+}
+.phase2{
+    font-weight: 500;
+}
+.ul{
+    margin-left: 30px;
+}
+h5{
+    color: #2C5F2D;
+    font-weight: 600;
+    font-size: 1em;
+
+}
+.sub{
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .skillcard-container {
+        flex-direction: column;
+        
+
+    }
+    .content-section h2{
+        color: #2C5F2D;
+    }
+    .content-section h3{
+        color: #2C5F2D;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left-column {
+        border-right: none;
+        padding-bottom: 1em;
+    }
+    
+
+}
+

@@ -1,16 +1,70 @@
 
 <% layout('layout/boilerplate') -%>
-<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
-
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/navbar.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/faq.css">') %>
     <%- include('partials/navbar') %>
     <section id="faq">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div id="faq-content">
+            <div class="row">
+           
+            <section class="questions">
+                <div class="ask">
+                    <form action="/faq" method="POST">
+                    <input type="text" name="question" placeholder="Ask your doubts..">
+                    <button>Ask</button>
+                     </form>
+
+                </div>
+                <div>
+                
+                    <% for( let Quest of allQuestions) { %>
+                        <div class="question-card">
+                            <span class="question-user" >- <%-Quest.author[0].username %> </span>
+                                <h3><%-Quest.question  %>?</h3>
+                                
+                                <div class="header">
+                                <i class="fa-solid fa-arrow-up"><span>upvote</span></i>
+                                <i class="fa-solid fa-arrow-down"><span>downvote</span></i>
+                                <i class="fa-regular fa-comment" data-content="<%-Quest._id%>"><span>answer</span></i>
+
+                            </div>
+
+                                    <form class="comment-form" id="<%-Quest._id%>" action="faq/<%-Quest._id%>/comment" method="post">
+                                    <input type="text" name="comment" placeholder="Write a response">
+                                    <button>Comment</button>
+                                    
+                                   <!-- <% if(Quest.comments[0]) {%>  -->
+                                   
+                                   
+                                    <% Quest.comments.forEach(comment => { %>
+                                       <div><i class="fa-solid fa-user"></i><span class="person"> <%-comment.author[0].username  %></span></div> 
+                                        <p class="comment"><%-comment.comment%></p>
+                                        <%  }) %>
+                                    <!-- <p><%-Quest.comments[0].comment %></p> -->
+                                 <!-- e   <% } %> -->
+                                    
+                                  
+                                  
+                                </form>
+                            
+                               
+                        </div>
+                        
+                        <% } %>
+                       
+                </div>
+            </section>
+            <section id="faq-content">
+                <h2>Frequently Asked Questions</h2>
+
+              
+               
                 <!-- FAQ items will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
+            </section>
+   
+</div>
+</div>
+</section>
 <footer>
     <div class="footer">
         <p>&copy; 2024 Expats in Malta. All rights reserved.</p>

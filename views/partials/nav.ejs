@@ -1,0 +1,49 @@
+<script src="../javascript/navtest.js"></script>
+<script src="https://kit.fontawesome.com/b165b56b5a.js" crossorigin="anonymous"></script>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/nav.css">') %>
+<header>
+<nav>
+    <a href="/" class="logo">Expats Guide Malta</a>
+    
+    <!-- Nav Links for Larger Screens -->
+    <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/workpermit">Work Permit</a>
+                <a href="/touristinfo">Tourist Info</a>
+               <a href="/skillcard">Skillcard</a>
+                <a href="/news">News</a>
+                <a href="/faq">FAQ</a>
+                <%if(!currentUser){ %>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <% }else{ %>
+                <a href="/logout">Logout</a>
+                <% } %>
+    </div>
+    
+    <!-- Hamburger Icon for Smaller Screens -->
+    <div class="hamburger1" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+
+<!-- Sidebar Menu -->
+<div class="sidebar" id="sidebar">
+    <span class="close-btn" onclick="toggleMenu()">&#10005;</span>
+    <a href="/">Home</a>
+                <a href="/workpermit">Work Permit</a>
+                <a href="/touristinfo">Tourist Info</a>
+               <a href="/skillcard">Skillcard</a>
+                <a href="/news">News</a>
+                <a href="/faq">FAQ</a>
+                <%if(!currentUser){ %>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <% }else{ %>
+                <a href="/logout">Logout</a>
+                <% } %>
+</div>
+
+    </header>

@@ -14,15 +14,20 @@ const User= require('./model/UserModel');
 const passport= require('passport');
 const Localstrategy= require('passport-local');
 const {isLoggedIn}=require('./middleware');
+const helmet= require('helmet');
+const mongoSanitize = require('express-mongo-sanitize');
+const MongoStore = require('connect-mongo');
+const nodemon=require('nodemon');
+
 
 const app=express();
 
 
 app.engine('ejs',ejsMate);
 app.set('view engine','ejs');
-
-
-mongoose.connect('mongodb://127.0.0.1:27017/expatsmatemalta') 
+// mongodb://127.0.0.1:27017/expatsmatemalta
+const dbUrl=process.env.DB_URL || 'mongodb://127.0.0.1:27017/expatsmatemalta';
+mongoose.connect(dbUrl) 
 const db=mongoose.connection;
 db.on("error",console.error.bind(console,"connection error:"));
 db.once("open",()=>{
@@ -32,19 +37,30 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/images'));
 app.use(methodOverride('_method'));
+app.use(mongoSanitize());
 
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 60 * 60,
+    crypto: {
+        secret: 'asecret'
+    }
+});
 app.use(session({
+    name:'Expatsession',
     secret: 'asecret',
     resave: false,
     saveUninitialized: true,
     cookie: {
         httpOnly:true,
+        // secure:true;
         expires:Date.now()+ 1000*60*60*24*7,
         maxAge:Date.now()+ 1000*60*60*24*7
      }
   }))
   app.use(flash());
-  
+  app.use(helmet({
+    contentSecurityPolicy: false})); 
 
     app.use(passport.initialize());
     app.use(passport.session());
@@ -58,9 +74,9 @@ app.use(session({
         res.locals.currentUser=req.user;
         next();
         });
+       
 
 app.get('/',(req,res,next)=>{
-    console.log(req.user);
     try{
     res.render("index.ejs");
 }
@@ -68,6 +84,7 @@ catch(e){
 next(e)
 }
 })
+
 app.get('/login',(req,res)=>{
     res.render("User/login.ejs");
 })

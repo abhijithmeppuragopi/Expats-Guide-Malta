@@ -55,7 +55,7 @@
    color: black;
    padding-left: 10px;
    font-style: italic;
-   text-align: end;
+  
  }
  .header{
     display: flex;
@@ -124,6 +124,15 @@
     color: black;
 
  }
+/* ,,,,,,.......Subtitle........ */
+ /* .tab-content{
+   display: none;
+}
+.tab-content.active-tabs{
+   display: block;
+} */
+
+
  /* .....Frequently asked....... */
 
  #faq-content{
@@ -164,4 +173,5 @@
     gap: 20px;
 
  }
+
 }

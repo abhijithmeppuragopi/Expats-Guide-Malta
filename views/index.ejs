@@ -1,8 +1,8 @@
 <% layout('layout/boilerplate') -%>
 <% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/styles.css">') %>
-<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/navbar.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/nav.css">') %>
 <body>
-    <%- include('partials/navbar') %>
+    <%- include('partials/nav') %>
     <% if(success && success.length>0) {%>
     <p class="success"><%-success  %></p>
     <% } %>

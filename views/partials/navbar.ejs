@@ -1,34 +1,66 @@
+<script src="../javascript/nav.js"></script>
+<script src="https://kit.fontawesome.com/b165b56b5a.js" crossorigin="anonymous"></script>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/nav.css">') %>
 <header>
-    <div class="container navbar">
-        <h1 class="logo">Expats Guide Malta</h1>
+   <div class="container navbar">
+   
+    <div class="dropdown">
+        <button class="dropbar-btn" onclick="myFunction()"><i class="fa-solid fa-bars dropbtn"></i></button>
+        <div id="myDropdown" class="dropdown-content">
+                <a href="/">Home</a>
+                <a href="/workpermit">Work Permit</a>
+                <a href="/touristinfo">Tourist Info</a>
+               <a href="/skillcard">Skillcard</a>
+                <a href="/news">News</a>
+                <a href="/faq">FAQ</a>
+                <%if(!currentUser){ %>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <% }else{ %>
+                <a href="/logout">Logout</a>
+                <% } %>
+    
+            
+        </div>
+      </div>
+      <h1 class="logo">Expats Guide Malta</h1>
+        
         <nav>
-            <div class="hamburger">
+            <!-- <div class="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
-            </div>
+            </div> -->
+           
+          
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/workpermit">Work Permit</a></li>
                 <li><a href="/touristinfo">Tourist Info</a></li>
                 <!-- <li><a href="/tax.html">Tax Information</a></li> -->
-                <li><a href="/skillcard">Skillcard</a></li>
+               <li><a href="/skillcard">Skillcard</a></li>
                 <li><a href="/news">News</a></li>
                 <li><a href="/faq">FAQ</a></li>
+                <li><a href="/navtest">nav</a></li>
+               
                 
-            </ul>
-            
+           
+           
+                <%if(!currentUser){ %>
+               <li> <a href="/login">Login</a></li>
+               <li><a href="/register">Register</a></li>
+                <% }else{ %>
+                    <li> <a href="/logout">Logout</a></li>
+                <% } %>
+    
+           
+        </ul>
+       
             
         </nav>
-        <div class="login">
-            <%if(!currentUser){ %>
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
-            <% }else{ %>
-            <a href="/logout">Logout</a>
-            <% } %>
+        
+   </div>  
 
-        </div>
-    </div>
+
        
 </header>

@@ -1,7 +1,7 @@
 <% layout('layout/boilerplate') -%>
-<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/navbar.css">') %>
+<% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/nav.css">') %>
 <% block('head').append('<link crossorigin="anonymous" rel="stylesheet" href="../stylesheet/newArticle.css">') %>
-    <%- include('../partials/navbar.ejs') %>
+    <%- include('../partials/nav.ejs') %>
 
 <h2>Add New Article</h2>
 <form action="/news/newarticle" method="POST">

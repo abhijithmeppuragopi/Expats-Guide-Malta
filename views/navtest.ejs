@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background-color: #555;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        /* Responsive Menu */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" style="color:white; font-size: 1.5em;">Logo</a>
+        
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/workpermit">Work Permit</a></li>
+            <li><a href="/touristinfo">Tourist Info</a></li>
+            <!-- <li><a href="/tax.html">Tax Information</a></li> -->
+            <li><a href="/skillcard">Skillcard</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            
+            <% if (!currentUser) { %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            <% } else { %>
+                <li><a href="/logout">Logout</a></li>
+            <% } %>
+        </ul>
+        
+        <!-- Hamburger Icon for Mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <script>
+        // Toggle menu visibility on smaller screens
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
